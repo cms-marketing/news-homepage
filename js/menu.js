@@ -7,10 +7,11 @@ const closeBtn = document.getElementById("close");
 wbtn.addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementById("menu").style.width = "250px";
-  document.getElementById("body").style.backdropFilter = "rgba(0,0,0,0.5);";
+  //   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 });
 
 closeBtn.addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementById("menu").style.width = "0";
+  //   document.body.style.backgroundColor = "white";
 });
