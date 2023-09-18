@@ -4,18 +4,14 @@
     <!-- Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Huddle landing page with a single introductory section
-  "
-    />
+    <meta name="description" content="New Home Page" />
     <meta name="author" content="Jade Bañares" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png" />
-    <link rel="stylesheet" href="/tailwind/output.css" />
     <!-- End of Meta Tags-->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
+    <link rel="stylesheet" href="/tailwind/output.css" />
     <title>News Homepage</title>
   </head>
-  <body class="max-w-[1180px] m-auto">
+  <body class="max-w-[1180px] m-auto" id="body">
     <main class="mx-4 my-6">
       <nav class="flex justify-between items-center my-8">
         <div>
@@ -23,9 +19,29 @@
             <img src="/images/logo.svg" alt="" />
           </a>
         </div>
-        <div class="md:hidden">
-          <img src="/images/icon-menu.svg" alt="" />
+        <!-- Mobile Menu -->
+        <div class="md:hidden cursor-pointer">
+          <img src="/images/icon-menu.svg" alt="Mobile Menu" id="btn" />
         </div>
+
+        <div
+          class="h-full w-0 fixed top-0 right-0 bg-white overflow-hidden ease-in duration-300"
+          id="menu"
+        >
+          <div class="flex justify-end pt-8 pr-5 cursor-pointer pb-12">
+            <img src="/images/icon-menu-close.svg" alt="" id="close" />
+          </div>
+          <ul class="pl-5 pt-8">
+            <li class="pb-4 font-inter"><a href="/">Home</a></li>
+            <li class="pb-4 font-inter"><a href="/">New</a></li>
+            <li class="pb-4 font-inter"><a href="/">Popular</a></li>
+            <li class="pb-4 font-inter"><a href="/">Trending</a></li>
+            <li class="pb-4 font-inter"><a href="/">Categories</a></li>
+          </ul>
+        </div>
+        <!-- End of Mobile Menu -->
+
+        <!-- Desktop Navigation Bar -->
         <div class="hidden md:block font-inter">
           <ul class="flex gap-12">
             <li>
@@ -41,6 +57,7 @@
             <li><a href="/" class="hover:text-softOrange">Categories</a></li>
           </ul>
         </div>
+        <!-- End of Navigation Bar -->
       </nav>
 
       <header>
@@ -48,12 +65,12 @@
           <section class="col-span-2">
             <div>
               <img
-                class="md:hidden w-full"
+                class="lg:hidden w-full"
                 src="/images/image-web-3-mobile.jpg"
                 alt=""
               />
               <img
-                class="hidden md:block w-full"
+                class="hidden lg:block w-full"
                 src="/images/image-web-3-desktop.jpg"
                 alt=""
               />
@@ -63,7 +80,7 @@
             >
               <div>
                 <h1
-                  class="text-4xl md:text-5xl md:pb-5 lg:text-6xl font-bold font-interBold text-balance"
+                  class="text-3xl pb-4 md:text-5xl md:pb-5 lg:text-6xl font-bold font-interBold text-balance"
                 >
                   The Bright Future of Web 3.0?
                 </h1>
@@ -196,5 +213,6 @@
         </section>
       </header>
     </main>
+    <script src="/js/menu.js"></script>
   </body>
 </html>
